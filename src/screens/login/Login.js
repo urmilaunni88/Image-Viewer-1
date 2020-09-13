@@ -44,7 +44,7 @@ class Login extends Component {
         let usernameCorrect = "unni";
         let passwordCorrect = "unni123";
         if (this.state.username === usernameCorrect && this.state.password === passwordCorrect) {
-            sessionStorage.setItem('access_token', 'IGQVJXWXN3ZAnh1MTNNT09IbmFqMklRejd4ZAkR2anhESThQbnB5R2dTMlM5cFNIT2hVblgxV29iSEtQbEdKbVRZAUjRfbVJ0WWpGOEZAKcjhXNGtKTThDZAEQ2aTJ0d3ZA0MUxrMDBhVi04SzJpSU1QTTZAzQ0hHTGROVE02cmdB');
+            sessionStorage.setItem('access_token', 'IGQVJXWV9CMXYyWlVYNlVjWW93ZAy03Y08zODBHMzlVQmFmRDZA6bUZA4ck9tWnJOeDZAwdUgzTWxHempqTmRtVnhBUjlrR3JMSHl1elpjd2hncTd4NFBlTk9FSkpLdlV0NlhSSDBZAX1FMRnBfaXk5MDAweUlaWDhPVDhBeG1V');
             console.log(sessionStorage.getItem('access_token'));
             ReactDOM.render(<Home baseUrl={this.props.baseUrl} />, document.getElementById('root'));
         }
@@ -75,7 +75,7 @@ class Login extends Component {
                 <FormControl required className="formControl">
                                     <InputLabel htmlFor="password">Password</InputLabel>
                                     <Input id="password" type="password" password={this.state.password} onChange={this.inputPasswordChangeHandler}/>
-                                    <FormHelperText ><span className="red">required</span></FormHelperText>
+                                    <FormHelperText className={this.state.reqPassword}><span className="red">required</span></FormHelperText>
                 </FormControl> <br /><br />
                 <FormControl required className="formControl">
                                     <FormHelperText className={this.state.error}><span className="red">Incorrect username and/or password</span></FormHelperText>
